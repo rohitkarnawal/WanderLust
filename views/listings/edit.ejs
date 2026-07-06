@@ -1,45 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderLust</title>
-</head>
+<% layout("/layouts/boilerplate") %>
 <body>
-    <h3>Edit your Listing</h3>
-    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
-        <input 
-        name="listing[title]" type="text" 
-        value="<%= listing.title %>">
-        <br><br>
+  <br /><br />
+  <div class="row">
+    <div class="col-md-8 offset-2">
+      <h3>Edit your Listing</h3>
+      <form
+        method="POST"
+        action="/listings/<%= listing._id %>?_method=PUT"
+        novalidate
+        class="needs-validation"
+      >
+        <!-- Title -->
+        <div class="mb-3">
+          <label for="title" class="form-label">Title </label>
+          <input
+            name="listing[title]"
+            type="text"
+            value="<%= listing.title %>"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">Title Looks good!</div>
+          <div class="invalid-feedback">Invalid title.</div>
+        </div>
 
-        <textarea 
-        name="listing[description]" id="" 
-        ><%= listing.description %></textarea>
-        <br><br>
+        <!-- Description -->
+        <div class="mb-3">
+          <label for="description" class="form-label">Description </label>
+          <textarea
+            name="listing[description]"
+            id=""
+            class="form-control"
+            required
+          >
+    <%= listing.description %></textarea
+          >
+          <div class="invalid-feedback">Please enter a short description.</div>
+        </div>
 
-        <input name="listing[image]" 
-        type="text" 
-        value="<%= listing.image.url %>">
-        <br><br>
+        <!-- Image -->
+        <div class="mb-3">
+          <label for="image" class="form-label">Image </label>
+          <input
+            name="listing[image.url]"
+            type="text"
+            value="<%= listing.image.url %>"
+            class="form-control"
+            required
+          />
+        </div>
 
-        <input name="listing[price]" 
-        type="number" 
-        value="<%= listing.price %>">
-        <br><br>
+        <div class="row">
+          <!-- Price -->
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price </label>
+            <input
+              name="listing[price]"
+              type="number"
+              value="<%= listing.price %>"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Price should be valid.</div>
+          </div>
 
-        <input name="listing[country]" 
-        type="text" 
-        value="<%= listing.country %>">
-        <br><br>
+          <!-- Country -->
+          <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country </label>
+            <input
+              name="listing[country]"
+              type="text"
+              value="<%= listing.country %>"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Country should be valid.</div>
+          </div>
+        </div>
 
-        <input name="listing[location]" 
-        type="text" 
-        value="<%= listing.location %>">
-        <br><br>
-
-
-        <button>Edit</button>
-    </form>
+        <!-- Location -->
+        <div class="mb-3">
+          <label for="location" class="form-label">Location </label>
+          <input
+            name="listing[location]"
+            type="text"
+            value="<%= listing.location %>"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Location should be valid.</div>
+        </div>
+        <br />
+        <button class="btn btn-dark edit-btn">Edit</button>
+      </form>
+      <br /><br />
+    </div>
+  </div>
 </body>
-</html>
