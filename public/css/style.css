@@ -102,3 +102,9 @@ a{
     padding: 7px 30px 7px 30px !important;
     margin-right: 2rem;
 }
+
+/* SignUp page */
+.signup {
+    color: white !important;
+    background-color: #fe424d !important;
+}
