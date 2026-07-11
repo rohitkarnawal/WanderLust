@@ -131,3 +131,109 @@ a{
     width: 100%;
     border-radius: 0px;
 }
+
+
+
+/* ================= FILTERS ================= */
+
+#filters{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1rem 0;
+
+    scrollbar-width: none;
+}
+
+#filters::-webkit-scrollbar{
+    display: none;
+}
+
+.filter{
+    flex: 0 0 auto;
+    text-align: center;
+    opacity: .7;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.filter:hover{
+    opacity: 1;
+}
+
+.filter i{
+    font-size: 1.2rem;
+}
+
+.filter p{
+    font-size: .8rem;
+    margin-top: .35rem;
+    margin-bottom: 0;
+}
+
+.filter-icon{
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    margin-left: auto;
+
+    border: 1px solid #cfcfcf;
+    border-radius: 1rem;
+
+    padding: .7rem 1rem;
+    cursor: pointer;
+}
+
+.filter-icon p{
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.tax-toggle{
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    border: 1px solid #cfcfcf;
+    border-radius: 1rem;
+
+    padding: .7rem 1rem;
+    margin-left: 1rem;
+}
+
+.form-check{
+    margin: 0;
+}
+
+.form-check-label{
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.tax-info{
+    display:none;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:767px){
+
+    #filters{
+        gap:1.4rem;
+        padding-bottom:.75rem;
+    }
+
+    .filter-icon{
+        margin-left:0;
+    }
+
+    .tax-toggle{
+        margin-left:0;
+    }
+}

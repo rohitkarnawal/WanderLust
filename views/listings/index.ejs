@@ -1,59 +1,6 @@
 <% layout("/layouts/boilerplate") %>
     
-    <style>
-        #filters {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .filter {
-            text-align: center;
-            margin-right: 2rem;
-            margin-top: 2rem;
-            opacity: 0.7;
-        }
-        .filter:hover{
-            opacity: 1;
-            cursor: pointer;
-        }
-        .filter p{
-            font-size: 0.8rem;
-        }
-        .tax-info{
-            display: none;
-        }
-        .tax-toggle{
-            display: flex;
-            align-items: center;
-            border: 1px solid grey;
-            border-radius: 1rem;
-            height: 2.8rem;
-            padding: 1rem;   
-            margin: auto;
-        }
-        .form-check-label{
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        .filter-icon{
-            display: flex;
-            align-items: center;
-            text-align: center;
-            border: 1px solid grey;
-            border-radius: 1rem;
-            /* flex-wrap: wrap; */
-            padding: 1rem;
-            height: 2.8rem;
-            cursor: pointer;
-        }
-        .filter-icon p{
-            font-size: 0.8rem;
-            margin-top: 16px;
-            margin-left: 0.5rem;
-            font-weight: 600;
-        }
 
-    </style>
 
     <div id="filters">
         <div class="filter">
@@ -101,7 +48,6 @@
            <p>New</p> 
         </div>
          
-        
         <div class="filter-icon">
             <i class="fa-solid fa-sliders"></i>
             <p>Filters</p>
@@ -114,6 +60,7 @@
 </div>
         </div>
     </div>
+    
 
    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
