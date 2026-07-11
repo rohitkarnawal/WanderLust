@@ -21,7 +21,24 @@ body{
 .nav-link{
     color: #222222 !important;
 }
+@media (max-width: 767px){
 
+    .row{
+        --bs-gutter-x: 0.75rem;
+    }
+
+    .listing-card img{
+        height: 9rem !important;
+    }
+
+    .card-body{
+        padding: 0.5rem;
+    }
+
+    .card-text{
+        font-size: 0.9rem;
+    }
+}
 /* footer */
 .f-info-links a{
     text-decoration: none;
@@ -71,6 +88,7 @@ a{
     opacity: 0.2;
     background-color: white !important;
 }
+
 /* New Page */
 
 .add-btn{
